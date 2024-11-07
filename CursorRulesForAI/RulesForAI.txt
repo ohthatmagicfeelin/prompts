@@ -1,0 +1,15 @@
+- always use ESM style imports and exports
+- backend code goes in server/src  
+- frontend code goes in client/src
+- use config.ENV_VAR instead of process.env.ENV_VAR. (import config from server/src/config/env.js)
+- server/src/index.js is where my backend express app is declared. (never create a server/src/app.js file)
+- keep server/src/index.js clean.
+- server/routes/routes.js is where express router stuff happens.
+- keep server/route/routes.js clean.
+- use layered architecture pattern:
+    - put routes into server/src/routes with xxxRoutes.js file names.
+    - put controller logic into server/src/controllers with xxxController.js file names.
+    - put service logic into server/src/services with xxxService.js file names.
+    - put db logic into server/src/db with xxxRepository.js file names.
+    - put api calls into server/src/api with xxxApi.js file names.
+Wrap context providers in client/src/routes/AppRoutes.jsx, not in App.jsx

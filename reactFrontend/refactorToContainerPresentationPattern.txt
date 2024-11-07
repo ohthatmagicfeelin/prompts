@@ -1,0 +1,43 @@
+I want to refactor the frontend to use the Container/Presentational Pattern:
+
+Here's a breakdown of each layer and its responsibilities:
+Presentational/Display Components
+
+Only contain JSX markup and styling
+Receive data exclusively through props
+Don't know where their data comes from
+Don't modify data, only display it
+Like a template with holes for data to be filled in
+Examples: Cards, Buttons, Forms, Lists, Tables
+
+Container Components
+
+Thin layer that connects hooks to display components
+Decides which components to show based on simple conditions
+Handles layout and composition of multiple components
+Passes data from hooks to display components
+Examples: UserProfilePage, DashboardLayout, ProductListContainer
+
+Custom Hooks
+
+Houses all React-specific logic
+Manages state and its updates
+Handles side effects (useEffect)
+Contains event handlers and form logic
+Makes API calls and manages loading/error states
+Examples: useUserProfile, useProductSearch, useFormValidation
+
+Services/Utils
+
+Pure JavaScript functions
+No React dependencies
+Handles complex calculations
+Validates data
+Transforms data between formats
+Examples: formatCurrency, validateEmail, calculateTotalPrice
+
+
+I want to do small chunks at a time, so I can test everything is working before moving onto the next refactor. Make sure to guide on which files to delete afterwards, and what imports (etc) need to change to make the new code work.
+
+
+we have done the feedback component, move on to the next thign
